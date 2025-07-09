@@ -21,6 +21,7 @@ public class Hello {
 	 System.out.println(nome + ", " + idade + " anos ");
 	 System.out.println("Data de quando foi gerado: " + date.toString());
 	 
+	 System.out.println("a");
 
 	}
 
