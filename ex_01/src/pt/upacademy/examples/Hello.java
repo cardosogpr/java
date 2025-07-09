@@ -22,9 +22,7 @@ public class Hello {
 	 System.out.println("Data de quando foi gerado: " + date.toString());
 	 
 	 System.out.println("a");
-	 System.out.println("b");
-	 System.out.println("c");
-	 
+
 	 
 
 	}
