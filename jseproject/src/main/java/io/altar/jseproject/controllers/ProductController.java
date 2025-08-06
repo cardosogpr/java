@@ -37,21 +37,35 @@ public class ProductController {
 	@Path("add")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public long addProduct(Product p) {
-		return PS.addEntity(p);
+	public Response addProduct(Product p) {
+	    long newProductId = PS.addEntity(p);
+	    String message = "O Produto com o ID " + newProductId + " foi criado.";
+	    
+
+	    return Response.status(Response.Status.CREATED)
+	                   .entity(message)
+	                   .build();
 	}
 	
 	@PUT
 	@Path("edit/{id}")
 	@Consumes(MediaType.APPLICATION_JSON)
-	public void editProduct(Product entity) {
+	public Response editProduct(Product entity) {
 	   PS.editEntity(entity); 
+	   
+	   return Response.status(Response.Status.OK)
+               .entity("Foi editado com sucesso!")
+               .build();
 	}
 	
     @DELETE
     @Path("delete/{id}")
-    public void deleteProduct(@PathParam("id") long id) {
+    public Response deleteProduct(@PathParam("id") long id) {
         PS.removeEntity(id);
+        
+        return Response.status(Response.Status.OK)
+                .entity("Foi apagado com sucesso!")
+                .build();
     }
     
     @GET

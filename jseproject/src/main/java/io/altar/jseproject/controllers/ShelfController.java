@@ -40,8 +40,13 @@ public class ShelfController {
 	@Path("add")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public long addProduct(Shelf s) {
-		return SS.addEntity(s);
+	public Response addProduct(Shelf s) {
+	    long newShelfId = SS.addEntity(s);
+	    String message = "O Produto com o ID " + newShelfId + " foi criado.";
+	 
+	    return Response.status(Response.Status.CREATED)
+	                   .entity(message)
+	                   .build();
 	}
 	
 	@PUT
