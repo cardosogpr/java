@@ -4,6 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import java.util.logging.Logger; // Se estiver a usar o Logger noutro local, caso contrário, pode remover
+
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
+
 import java.util.Collection;
 
 

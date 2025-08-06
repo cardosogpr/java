@@ -10,6 +10,7 @@ import io.altar.jseproject.repositories.ShelfRepository;
 public class ShelfServices extends EntityServices {
 	
 	private ShelfRepository DBS = ShelfRepository.getInstance();
+	private ProductRepository DBP = ProductRepository.getInstance();
 	
 	public long addEntity(Shelf entity) { 
           return DBS.addEntity(entity);

@@ -1,6 +1,6 @@
 package io.altar.jseproject.textinterface;
 
-import io.altar.jseproject.textinterface.TextInterfaceStateMachine;
+import io.altar.jseproject.textinterface.*;
 
 public class TextInterfaceApp {
 

@@ -4,12 +4,15 @@ import java.util.Collection;
 
 import io.altar.jseproject.model.Shelf;
 import io.altar.jseproject.repositories.ShelfRepository;
+import io.altar.jseproject.services.ProductService;
 import io.altar.jseproject.services.ShelfServices;
 import io.altar.jseproject.textinterface.states.ReadShelfs;
 
 public class DeleteShelfs extends State {
 	
 	private ShelfServices SS = new ShelfServices();
+	private ProductService PS = new ProductService();
+	
 	public int on() {
 		 System.out.println("------ Lista de Prateleiras ------");
 			
